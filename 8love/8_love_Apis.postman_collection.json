@@ -1,0 +1,1444 @@
+{
+	"info": {
+		"_postman_id": "c35100db-bc6a-4a0f-a669-dac5f24074b1",
+		"name": "8_love_Apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34900672"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"mythicgaming2020@gmail.com\",\r\n    \"password\" : \"12121212\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Rajaas",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Arsalan",
+							"type": "text"
+						},
+						{
+							"key": "user_name",
+							"value": "Manager",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ManagersRaja@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12121212",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "UAE",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "23234534",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register?first_name=faizan&last_name=khan&user_name=faizan_khan&email=faizankhan888980@gmail.com&password=faizan0900&country=pakistan&phone=0312001439",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "faizan"
+						},
+						{
+							"key": "last_name",
+							"value": "khan"
+						},
+						{
+							"key": "user_name",
+							"value": "faizan_khan"
+						},
+						{
+							"key": "email",
+							"value": "faizankhan888980@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "faizan0900"
+						},
+						{
+							"key": "country",
+							"value": "pakistan"
+						},
+						{
+							"key": "phone",
+							"value": "0312001439"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify-email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 133|XkCamewelylW5YIYQ9cvdZ25Slwt5QTU0lVcxIA3f63a7d22"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mythicgaming2020@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/verify-email?email=faizankhan888980@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"verify-email"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "faizankhan888980@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify-otp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 135|TBsfdS6H9QgO6KrSso6ANCi1xe3limlWQ1u1m7eT00271303"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "otp",
+							"value": "3960",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mythicgaming2020@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/verify-otp",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"verify-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change-password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 135|TBsfdS6H9QgO6KrSso6ANCi1xe3limlWQ1u1m7eT00271303"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/change-password/66",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"change-password",
+						"66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profiles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "147|ZkHCjMd4xipTQDqpWXlDkOyKhlghMSoh8wAV2DAs97727ed1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image[]",
+							"type": "file",
+							"src": [
+								"/C:/Users/Imthe_Coder/Desktop/Slide/WhatsApp Image 2024-06-03 at 14.39.45_19b585fe.jpg",
+								"/C:/Users/Imthe_Coder/Desktop/Slide/WhatsApp Image 2024-06-03 at 14.39.45_63c87a50.jpg",
+								"/C:/Users/Imthe_Coder/Desktop/Slide/WhatsApp Image 2024-06-03 at 14.39.45_acd6ff0f.jpg",
+								"/C:/Users/Imthe_Coder/Desktop/Slide/WhatsApp Image 2024-06-03 at 14.39.46_c4ba1219.jpg"
+							]
+						},
+						{
+							"key": "video[]",
+							"type": "file",
+							"src": [
+								"/C:/Users/Imthe_Coder/Desktop/lovelove/public/videos/1717001421_1.mp4",
+								"/C:/Users/Imthe_Coder/Desktop/lovelove/public/videos/1717001421_2.mp4"
+							]
+						},
+						{
+							"key": "birthdate",
+							"value": "2024-05-23 21:15:06",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "relation_status",
+							"value": "SIngle",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "43",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "45",
+							"type": "text"
+						},
+						{
+							"key": "looking_for",
+							"value": "GirlFriend",
+							"type": "text"
+						},
+						{
+							"key": "about",
+							"value": "dgsdfhfghdfgj",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "karachi saddar",
+							"type": "text"
+						},
+						{
+							"key": "interest",
+							"value": "Criecket",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "34",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "24.32534344",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "67.32534344",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "date",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/profiles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 136|lMnhx4KQC7vHdokStRUOAVx87t6INp33L1Vuy4By2fd96164"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllUsers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 137|J6Azhz3xBppH3KL4BXXOT5bJ3O3PMxrTsdq5uN2W3edd7a95"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get-all-user/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get-all-user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PaidUsers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 137|J6Azhz3xBppH3KL4BXXOT5bJ3O3PMxrTsdq5uN2W3edd7a95"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get-paid-user/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get-paid-user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewUsers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 137|J6Azhz3xBppH3KL4BXXOT5bJ3O3PMxrTsdq5uN2W3edd7a95"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get-new-user/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get-new-user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nearby-user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 121|4lHefYVw4Ggo0o8OA0F87ncoSZVs9O7npFTgvasRdf305008"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get-nearby-user/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get-nearby-user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "friends_add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 65|B5TbSvGrSSAqX24we0Trj3CH5lc3sTeuad8hp53Ea828fe70"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/add-friend/69",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"add-friend",
+						"69"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "discover-Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 120|d3jLKN40NhgLMhk23KmZ1EctYQG29ePCU2T2xRMw91945d9e"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/discover-users/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"discover-users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 121|4lHefYVw4Ggo0o8OA0F87ncoSZVs9O7npFTgvasRdf305008"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"latitude\": 24.8607,\r\n    \"longitude\": 67.0011,\r\n    \"distance\": 1000\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/filter-users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"filter-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like-User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 137|J6Azhz3xBppH3KL4BXXOT5bJ3O3PMxrTsdq5uN2W3edd7a95"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "liked_user_id",
+							"value": "66",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/like-User",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"like-User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Like",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "137|J6Azhz3xBppH3KL4BXXOT5bJ3O3PMxrTsdq5uN2W3edd7a95",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "66",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cancel-like",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cancel-like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Favorites",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 137|J6Azhz3xBppH3KL4BXXOT5bJ3O3PMxrTsdq5uN2W3edd7a95"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/favorites",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VisitToUsers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 137|J6Azhz3xBppH3KL4BXXOT5bJ3O3PMxrTsdq5uN2W3edd7a95"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/visit-user/66",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"visit-user",
+						"66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FriendsList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 137|J6Azhz3xBppH3KL4BXXOT5bJ3O3PMxrTsdq5uN2W3edd7a95"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/friends-List",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friends-List"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VisitorList",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 137|J6Azhz3xBppH3KL4BXXOT5bJ3O3PMxrTsdq5uN2W3edd7a95"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/visitor-list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"visitor-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LikeList",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 137|J6Azhz3xBppH3KL4BXXOT5bJ3O3PMxrTsdq5uN2W3edd7a95"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/like-list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"like-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MatcheList",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 137|J6Azhz3xBppH3KL4BXXOT5bJ3O3PMxrTsdq5uN2W3edd7a95"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/matched-user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"matched-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "block User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 96|Kb2Yyd1DPxDwt3tmrYAMNrAQZKmCq6SrFnI9Yema2652be1d"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/block/66",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"block",
+						"66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unblock User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 96|Kb2Yyd1DPxDwt3tmrYAMNrAQZKmCq6SrFnI9Yema2652be1d"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/unblock/67",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"unblock",
+						"67"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "blocked-user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 96|Kb2Yyd1DPxDwt3tmrYAMNrAQZKmCq6SrFnI9Yema2652be1d"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blocked-user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blocked-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 131|hqTwgetVO1um3lr2YuP7yNgaUP7hfY6y1w7YBYI24292b74a"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/79",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"79"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LanguageStore",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "143|Ljaj67uiLlzdRxOyva8gG2HQHr4G6AQitmAd7XNXe3132e7d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "language",
+							"value": "Dumm",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/language-create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"language-create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LanguageShow",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "143|Ljaj67uiLlzdRxOyva8gG2HQHr4G6AQitmAd7XNXe3132e7d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/language-show/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"language-show",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GoalsAreas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "143|Ljaj67uiLlzdRxOyva8gG2HQHr4G6AQitmAd7XNXe3132e7d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "goals",
+							"value": "starts a New Career",
+							"type": "text"
+						},
+						{
+							"key": "areas[]",
+							"value": "sports,subrime,cenima",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/goals-areas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"goals-areas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCoursesByCategory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "143|Ljaj67uiLlzdRxOyva8gG2HQHr4G6AQitmAd7XNXe3132e7d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get-courses",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get-courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StoreCourseUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "143|Ljaj67uiLlzdRxOyva8gG2HQHr4G6AQitmAd7XNXe3132e7d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "course_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "spendtime",
+							"value": "15min",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/store-course-user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store-course-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAuthors",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "143|Ljaj67uiLlzdRxOyva8gG2HQHr4G6AQitmAd7XNXe3132e7d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get-authors",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get-authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RecommendedCourse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "143|Ljaj67uiLlzdRxOyva8gG2HQHr4G6AQitmAd7XNXe3132e7d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/recommender-courses",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recommender-courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PopularSkills",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "143|Ljaj67uiLlzdRxOyva8gG2HQHr4G6AQitmAd7XNXe3132e7d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/popular-skill",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"popular-skill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "143|Ljaj67uiLlzdRxOyva8gG2HQHr4G6AQitmAd7XNXe3132e7d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/categories",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewRelease",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "143|Ljaj67uiLlzdRxOyva8gG2HQHr4G6AQitmAd7XNXe3132e7d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/new-release",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"new-release"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CourseSearch",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "143|Ljaj67uiLlzdRxOyva8gG2HQHr4G6AQitmAd7XNXe3132e7d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/search-courses/PYTHON",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"search-courses",
+						"PYTHON"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
